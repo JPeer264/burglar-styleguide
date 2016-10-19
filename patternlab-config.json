@@ -1,8 +1,10 @@
 {
   "paths" : {
     "cache": {
-      "scss": "./.sass-cache/scss",
-      "css": "./.sass-cache/css"
+      "scssall": "./.sass-cache/scssall/",
+      "scss": "./.sass-cache/scss/",
+      "css": "./.sass-cache/css/",
+      "scsscombined": "./.sass-cache/scsscombined/"
     },
     "source" : {
       "root": "./source/",
@@ -15,7 +17,8 @@
       "js" : "./source/js",
       "images" : "./source/images",
       "fonts" : "./source/fonts",
-      "scss" : "./source/scss"
+      "scss" : "./source/scss/",
+      "scssall": "./source/**/"
     },
     "public" : {
       "root" : "./public/",
@@ -27,6 +30,9 @@
       "images" : "./public/images",
       "fonts" : "./public/fonts",
       "css" : "./public/css"
+    },
+    "exclude": {
+      "sass": "!./source/scss/**/*.scss"
     }
   },
   "styleGuideExcludes": [
