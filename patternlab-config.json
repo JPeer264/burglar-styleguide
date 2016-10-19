@@ -1,5 +1,9 @@
 {
   "paths" : {
+    "cache": {
+      "scss": "./.sass-cache/scss",
+      "css": "./.sass-cache/css"
+    },
     "source" : {
       "root": "./source/",
       "patterns" : "./source/_patterns/",
@@ -11,7 +15,7 @@
       "js" : "./source/js",
       "images" : "./source/images",
       "fonts" : "./source/fonts",
-      "css" : "./source/css/"
+      "scss" : "./source/scss"
     },
     "public" : {
       "root" : "./public/",

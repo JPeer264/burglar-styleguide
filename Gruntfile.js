@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-sass');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -71,7 +72,7 @@ module.exports = function (grunt) {
       main: {
         files: [
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
+          { expand: true, cwd: path.resolve(paths().source.scss), src: '*.scss', dest: path.resolve(paths().cache.scss) },
           { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
@@ -81,14 +82,25 @@ module.exports = function (grunt) {
         ]
       }
     },
+
+    sass: {
+      cache: {
+        files: [
+          {
+            src: path.resolve(paths().cache.scss) + '/main.scss',
+            dest: path.resolve(paths().public.css) + '/main.css'
+          }
+        ]
+      }
+    },
     /******************************************************
      * SERVER AND WATCH TASKS
     ******************************************************/
     watch: {
       all: {
         files: [
-          path.resolve(paths().source.css + '**/*.css'),
-          path.resolve(paths().source.styleguide + 'css/*.css'),
+          path.resolve(paths().source.scss + '**/*.scss'),
+          path.resolve(paths().source.styleguide + 'scss/*.scss'),
           path.resolve(paths().source.patterns + '**/*'),
           path.resolve(paths().source.fonts + '/*'),
           path.resolve(paths().source.images + '/*'),
@@ -150,8 +162,8 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'copy:main', 'sass']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'sass', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'sass', 'browserSync', 'watch:all']);
 
 };
