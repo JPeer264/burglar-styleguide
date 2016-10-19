@@ -207,9 +207,9 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
+  grunt.registerTask('default', ['patternlab', 'copy:main', 'manage:sass']);
   grunt.registerTask('manage:sass', ['copy:scss', 'sass:cache', 'concat:scss', 'sass:sassall', 'concat:csscombined']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'manage:sass', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'manage:sass', 'browserSync', 'watch:all']);
 
 };
