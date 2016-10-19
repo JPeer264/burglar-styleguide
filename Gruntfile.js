@@ -114,7 +114,7 @@ module.exports = function (grunt) {
               path.resolve(paths().cache.css) + '/main.css',
               path.resolve(paths().cache.css) + '/scssall.css'
             ],
-            dest: path.resolve(paths().public.css) + '/main.css'
+            dest: path.resolve(paths().public.css) + '/style.css'
           }
         ]
       }
