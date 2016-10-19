@@ -11,8 +11,10 @@ module.exports = function (grunt) {
 
   // load all grunt tasks
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-sass');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -71,13 +73,68 @@ module.exports = function (grunt) {
       main: {
         files: [
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
           { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
           // slightly inefficient to do this again - I am not a grunt glob master. someone fix
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
+        ]
+      },
+      scss: {
+        files: [
+          { expand: true, cwd: path.resolve(paths().source.scss), src: '*.scss', dest: path.resolve(paths().cache.scss) },
+        ]
+      }
+    },
+
+    concat: {
+      // concat all scss files
+      scss: {
+        options: {
+          // add the sourcefile as comment
+          process: function(src, filepath) {
+            return '/* Source: ' + filepath + '*/\n' + src
+          }
+        },
+        files: [
+          {
+            src:[
+              './source/**/*.scss',
+              '!./source/scss/**/*.scss'
+            ],
+            dest: path.resolve(paths().cache.scssall) + '/scssall.scss'
+          }
+        ]
+      },
+      csscombined: {
+        files: [
+          {
+            src:[
+              path.resolve(paths().cache.css) + '/main.css',
+              path.resolve(paths().cache.css) + '/scssall.css'
+            ],
+            dest: path.resolve(paths().public.css) + '/style.css'
+          }
+        ]
+      }
+    },
+
+    sass: {
+      cache: {
+        files: [
+          {
+            src: path.resolve(paths().cache.scss) + '/main.scss',
+            dest: path.resolve(paths().cache.css) + '/main.css'
+          }
+        ]
+      },
+      sassall: {
+        files: [
+          {
+            src: path.resolve(paths().cache.scssall) + '/scssall.scss',
+            dest: path.resolve(paths().cache.css) + '/scssall.css'
+          }
         ]
       }
     },
@@ -87,8 +144,8 @@ module.exports = function (grunt) {
     watch: {
       all: {
         files: [
-          path.resolve(paths().source.css + '**/*.css'),
-          path.resolve(paths().source.styleguide + 'css/*.css'),
+          path.resolve(paths().source.scss + '**/*.scss'),
+          path.resolve(paths().source.styleguide + 'scss/*.scss'),
           path.resolve(paths().source.patterns + '**/*'),
           path.resolve(paths().source.fonts + '/*'),
           path.resolve(paths().source.images + '/*'),
@@ -150,8 +207,9 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'copy:main', 'manage:sass']);
+  grunt.registerTask('manage:sass', ['copy:scss', 'sass:cache', 'concat:scss', 'sass:sassall', 'concat:csscombined']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'manage:sass', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'manage:sass', 'browserSync', 'watch:all']);
 
 };
