@@ -1,0 +1,25 @@
+.sg {
+
+	&-header {
+		display: flex;
+		height: $header-height;
+		background: $c-header-bg;
+		color: $c-header-text;
+	}
+
+	&-logo {
+		flex: 1 0  auto;	
+	}
+
+	&-navigation {
+		flex: 2 0 auto;
+
+		&__list {
+			display: block;
+		}
+
+		&__item {
+			display: block;
+		}
+	}
+}
