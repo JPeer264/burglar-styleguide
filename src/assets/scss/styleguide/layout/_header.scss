@@ -1,5 +1,4 @@
 .sg {
-
 	&-header {
 		display: flex;
 		height: $header-height;
@@ -8,18 +7,28 @@
 	}
 
 	&-logo {
-		flex: 1 0  auto;	
+		flex: 1 0  auto;
+		background: #5f8ee4;
+		display: flex;
+		justify-content: center;
+		align-items: center
 	}
 
 	&-navigation {
 		flex: 2 0 auto;
 
 		&__list {
-			display: block;
+			height: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
 		}
 
 		&__item {
-			display: block;
+			display: inline-block;
+			height: 100%;
+			margin: 0 20px;
+			line-height: $header-height;
 		}
 	}
 }
