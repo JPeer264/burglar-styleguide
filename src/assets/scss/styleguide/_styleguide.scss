@@ -1,2 +1,8 @@
 @import 'variables';
 @import 'layout/header';
+@import 'layout/sections';
+
+// Typo
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
