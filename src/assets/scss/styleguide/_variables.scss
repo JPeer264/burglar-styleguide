@@ -5,3 +5,11 @@ $header-height: 60px;
 $c-header-bg: #343437;
 $c-header-text: #CCCFCF;
 $c-white: #F8FCFF;
+$c-thin-line: #ccc;
+
+// Z-Layers
+$layers: (
+	nav: 2, 
+	content: 1, 
+	background: -1
+);

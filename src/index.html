@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
 
 
   <link rel="stylesheet" href="assets/css/global.css"> <!-- Compiled style -->
@@ -30,47 +30,55 @@
   <main class="sg-container">
     <h1>Style Guide</h1>
 
-    <section id="branding" class="sg-branding">
-      <h2>Branding</h2>
+    <section id="branding" class="sg-section sg-branding">
+      <h2 class="sg-section__heading">Branding</h2>
 
-      <h3 id="colors">Colors</h3>
+      <div class="sg-section__group">
+        <h3 id="colors" class="sg-section__subheading">Colors</h3>
 
-        <div class="sg-color-group">
-          <div class="sg-color-preview black">#202020</div>
-          <div class="sg-color-preview white inverted">#EEEEEE</div>
-	</div> 
+        <div class="sg-color__group">
+          <div class="sg-color__preview black">#202020</div>
+          <div class="sg-color__preview white inverted">#EEEEEE</div>
+        </div> 
 
-	<div class="sg-color-group">
-          <div class="sg-color-preview green">#457355</div>
-          <div class="sg-color-preview beige inverted">#D7D9CC</div>
-          <div class="sg-color-preview brown">#8C715A</div>
-          <div class="sg-color-preview orange">#A65644</div>
-          <div class="sg-color-preview red">#401915</div>
-	</div>
+        <div class="sg-color__group">
+          <div class="sg-color__preview green">#457355</div>
+          <div class="sg-color__preview beige inverted">#D7D9CC</div>
+          <div class="sg-color__preview brown">#8C715A</div>
+          <div class="sg-color__preview orange">#A65644</div>
+          <div class="sg-color__preview red">#401915</div>
+        </div>
+      </div>
+      
+      <div class="sg-section__group">
+        <h3 id="logo" class="sg-section__subheading">Logo</h3>
 
-      <h3 id="logo">Logo</h4>
-
-	<h4>Large</h4>
+        <h4>Large</h4>
         <img src="assets/img/logo_large.png"/>
 
         <h4>Small</h4>
-	<img src="assets/img/logo_small.png"/>
+        <img src="assets/img/logo_small.png"/>
 
-      <h3 id="typography">Typography</h3>
+        <code class="sg-snippet">
+          &lt;img src="assets/img/logo_small.png"/&gt;
+        </code>
+      </div>
+      <div class="sg-section__group">
+      <h3 id="typography" class="sg-section__subheading">Typography</h3>
 
-	<h1>Heading 1</h1>
-	<h2>Heading 2</h2>
-	<h3>Heading 3</h3>
-	<h4>Heading 4</h4>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
 
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p>
 
-	<small>Small Text</small>
+         <small>Small Text</small>
+       </div>
+     </section>
 
-    </section>
-
-    <section id="components" class="sg-components">
-      <h2>Components</h2>
+     <section id="components" class="sg-section sg-components">
+      <h2 class="sg-section__heading">Components</h2>
     </section>
   </main>
 </body>

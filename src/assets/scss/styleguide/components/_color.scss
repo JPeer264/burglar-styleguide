@@ -1,0 +1,47 @@
+.sg-color {
+  &__group {
+    margin: 15px 0;
+    border: 1px solid $c-thin-line;
+  }
+
+  &__preview {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    color: $c-white;  
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
+.inverted {
+  color: $c-black;
+}
+
+.green {
+  background: $c-green;
+}
+
+.orange {
+  background: $c-orange;
+}
+
+.red {
+  background: $c-red;
+}
+
+.beige {
+  background: $c-beige;
+}
+
+.brown {
+  background: $c-brown;
+}
+
+.black {
+  background: $c-black;
+}
+
+.white {
+  background: $c-white;
+}

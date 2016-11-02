@@ -1,43 +1,32 @@
-.sg-color-group {
-  margin-bottom: 15px;
-}
+.sg-section {
+   &__heading {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $c-thin-line;
+  }
 
-.sg-color-preview {
-  width: 100%;
-  padding: 20px;
-  color: $c-white;  
-  text-align: center;
-  font-size: 1.5em;
-}
+  &__subheading {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    
+    display: block;
+    margin: 0;
+    padding:  20px;
+    
+    background: #343437;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
 
-.inverted {
-  color: $c-black;
-}
+    color: $c-white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
-.green {
-  background: $c-green;
-}
-
-.orange {
-  background: $c-orange;
-}
-
-.red {
-  background: $c-red;
-}
-
-.beige {
-  background: $c-beige;
-}
-
-.brown {
-  background: $c-brown;
-}
-
-.black {
-  background: $c-black;
-}
-
-.white {
-  background: $c-white;
+  &__group {
+    position: relative;
+    padding: 80px 15px 15px 15px;
+    margin: 10px 0 10px 20px;
+    border: 1px solid $c-thin-line;
+    border-radius: 20px;
+  }
 }

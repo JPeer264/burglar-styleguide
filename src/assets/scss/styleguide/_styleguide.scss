@@ -1,10 +1,11 @@
 @import 'variables';
-@import 'layout/header';
 @import 'layout/body';
+@import 'layout/header';
 @import 'layout/sections';
+@import 'components/snippet';
+@import 'components/color';
 
 // Typo
 body {
   font-family: 'Open Sans Condensed', sans-serif;
 }
-
