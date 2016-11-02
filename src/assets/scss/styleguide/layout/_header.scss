@@ -7,11 +7,13 @@
 	}
 
 	&-logo {
-		flex: 1 0  auto;
-		background: #5f8ee4;
+		flex: 1 0 auto;
 		display: flex;
 		justify-content: center;
-		align-items: center
+		align-items: center;
+		
+		background: #5f8ee4;
+		color: $c-header-bg;
 	}
 
 	&-navigation {
@@ -28,7 +30,14 @@
 			display: inline-block;
 			height: 100%;
 			margin: 0 20px;
+			
 			line-height: $header-height;
+			letter-spacing: 0.1em;
+
+			&:hover {
+				color: $c-white;
+				transition: color 0.2s ease-in;
+			}
 		}
 	}
 }
