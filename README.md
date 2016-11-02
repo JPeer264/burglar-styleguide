@@ -4,7 +4,7 @@
 ### Brand Guide
 - colors
 - logo
-- typpography
+- typography
 
 ### CSS Methodology
 - Code style rules (airbnb)
@@ -28,8 +28,28 @@
 - Red: #401915
 
 ### Logo
-
+- Large Logo
+- Medium Logo
+- Small Logo
 
 ### Typography
+#### Font Family
+- Heading: Abril Fatface
+- Body: Open Sans Condensed
+
+#### Font Size
+[Augmented Fourth Scale](http://type-scale.com/) 
+
+## CSS Methodology
+### Code Style Rules
+[Airbnb Styleguide](https://github.com/airbnb/css) should be followed
+
+### File Structure
+
+### Preprocessor/ Build Pipeline
+
+### Naming Conventions
 
 
+
+## Component Library
