@@ -1,7 +1,7 @@
 // Content
-main {
+.sg-container {
 	width: 90%;
     max-width: 1024px;
-    margin: 0 auto;
+    margin: $header-height auto 0  auto;
     padding: 50px 0;
 }

@@ -1,5 +1,8 @@
 .sg {
 	&-header {
+		position: fixed;
+		top: 0; left: 0;
+		width: 100%;
 		display: flex;
 		height: $header-height;
 		background: $c-header-bg;
@@ -14,10 +17,16 @@
 		
 		background: #5f8ee4;
 		color: $c-header-bg;
+
+		&__image {
+			flex: 0;
+			height: 40%;
+			width: auto;
+		}
 	}
 
 	&-navigation {
-		flex: 2 0 auto;
+		flex: 3 0 auto;
 
 		&__list {
 			height: 100%;
@@ -28,6 +37,7 @@
 
 		&__item {
 			display: inline-block;
+			position: relative;
 			height: 100%;
 			margin: 0 20px;
 			
@@ -37,6 +47,22 @@
 			&:hover {
 				color: $c-white;
 				transition: color 0.2s ease-in;
+
+				&:after {
+					width: 100%;
+					left: 0%;
+				}
+			}
+
+			&:after {
+				position: absolute;
+				top: 70%; left: 50%;
+
+				content: '';
+				width: 0px;
+				height: 1px;
+				background: $c-white;
+				transition: width 0.2s ease-out,left 0.2s ease-out;
 			}
 		}
 	}
