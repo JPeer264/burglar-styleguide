@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/global.css"> <!-- Compiled style -->
 
@@ -31,13 +32,14 @@
         <li class="sg-navigation__group">
          <a href="#methodology" class="js-nav-item">Methodologies</a>
          <ul class="sg-navigation__subnav">
-           <li class="sg-navigation__item"><a href="#css" class="js-nav-item">CSS</a></li>
+           <li class="sg-navigation__item"><a href="#code-style">Code Style</a></li>
          </ul>
 
          <li class="sg-navigation__group">
            <a href="#components" class="js-nav-item">Components</a>
            <ul class="sg-navigation__subnav">
-            <li class="sg-navigation__item"><a href="#button" class="js-nav-item">Buttons</a></li>
+            <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
+               <li class="sg-navigation__item"><a href="#forms">Forms</a></li>
           </ul>
         </li>
 
@@ -53,6 +55,11 @@
 
       <div id="colors" id="" class="sg-section__group js-section">
         <h3 class="sg-section__subheading">Colors</h3>
+
+      <div class="sg-section__description">
+        Description is still missing!
+      </div>
+      <hr/>
 
         <div class="sg-color__group sg-color__preview--fourth">
           <div class="sg-color__preview black">#202020 <span class="sg-color__name">$c-black</span></div>
@@ -73,30 +80,45 @@
       <div id="logo" class="sg-section__group js-section">
         <h3 class="sg-section__subheading">Logo</h3>
 
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
+
         <h4 class="sg-section__subsubheading">Large</h4>
 
         <div class="sg-logo-section">
           <img src="assets/img/logo_large.png"/>
+          <img src="assets/img/logo_large_neg.png"/>
         </div>
 
         <pre>
           <code class="sg-snippet">
 &lt;img src="assets/img/logo_large.png"/&gt;
+&lt;img src="assets/img/logo_large_neg.png"/&gt;
           </code>
         </pre>
 
         <h4 class="sg-section__subsubheading">Small</h4>    
         <div class="sg-logo-section">
           <img src="assets/img/logo_small.png"/>
+          <img src="assets/img/logo_small_neg.png"/>
         </div>
+
         <pre>
           <code class="sg-snippet">
 &lt;img src="assets/img/logo_small.png"/&gt;
+&lt;img src="assets/img/logo_small_neg.png"/&gt;
           </code>
         </pre>
       </div>
       <div id="typography" class="sg-section__group js-section">
       <h3 class="sg-section__subheading">Typography</h3>
+
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
 
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -109,11 +131,61 @@
        </div>
      </section>
 
+<<<<<<< HEAD
      <section id="components" class="sg-section sg-components js-section">
+=======
+     <section id="methodology">
+
+      <h2 class="sg-section__heading">Methodology</h2>
+
+      <div class="sg-section__group">
+        <h3 id="code-style" class="sg-section__subheading">Code Style</h3>
+
+        <div class="sg-section__description">
+          This styleguide follows the <a href="https://github.com/airbnb/css">airbnb conventions</a> for writing CSS.
+          Here is a summary of the most important points:
+          <ul>
+            <li>Use soft tabs (2 spaces) for identation</li>
+            <li>Prefer dashes to camelCase when naming classes</li>
+            <li>Don't use ID selectors</li>
+            <li>When using multiple selectors, give each one an individual line</li>
+            <li>Only use line comments (in SASS)</li>
+            <li>Write detailed comments for code that is not self-explaining</li>
+          </ul>
+        </div>
+
+        <pre>
+          <code class="sg-snippet scss">
+.navigation {
+  width: 100%
+
+  // this is a comment
+  ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+          </code>
+        </pre>
+
+      </div>
+
+
+     </section>
+
+     <section id="components" class="sg-section sg-components">
+>>>>>>> dc0c53d95fbfe9dbc9850669f2c750b5aec35010
       <h2 class="sg-section__heading">Components</h2>
 
       <div id="button" class="sg-section__group js-section">
         <h3 class="sg-section__subheading">Button</h3>
+
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
 
           <h4 class="sg-section__subsubheading">Normal</h4>
           <button class="button">Click me!</button>
@@ -142,6 +214,84 @@
           </pre>
 
       </div>
+
+     <div class="sg-section__group">
+
+         <h3 id="forms" class="sg-section__subheading">Forms</h3>
+
+         <form class="form">
+             <fieldset class="form__fieldset">
+                 <legend>Choose your Burger:</legend>
+
+             <label for="">
+                 Size
+                 <select>
+                     <option value="" disabled selected>Select...</option>
+                     <option>Small</option>
+                     <option>Medium</option>
+                     <option>Large</option>
+                 </select>
+             </label>
+
+             <fieldset>
+                 <label for="mastercard">
+                     Mastercard</label><input type="radio" id="mastercard" name="payment-method" value="Mastercard">
+                 </label>
+                 <label for="visa">
+                     Visa</label><input type="radio" id="visa" name="payment-method" value="Visa">
+                 </label>
+                 <label for="american-express">
+                     American Express</label><input type="radio" id="american-express" name="payment-method" value="AmericanExpress">
+                 </label>
+
+             </fieldset>
+
+             <label for="comments">
+                Comments: <textarea name="comments" id="comments" rows="4" cols ="50"></textarea>
+             </label>
+
+             </fieldset>
+
+             <fieldset class="form__fieldset">
+                 <legend>Personal information:</legend>
+
+                 <div class="form__input">
+                    <label for="first-name" class="form__label">First name:</label>
+                    <input name="first-name" id="first-name" class="form__input-field" placeholder="John">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="surname" class="form__label">Surname:</label>
+                    <input name="surname" id="surname" class="form__input-field" placeholder="Doe">
+                </div>
+
+                 <div class="form__input">
+                    <label for="street" class="form__label">Street</label>
+                    <input name="street" id="street" class="form__input-field" placeholder="Bahnhofstrasse 5">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="zip" class="form__label">ZIP:</label>
+                    <input name="zip" id="zip" class="form__input-field" placeholder="5020">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="city" class="form__label">City</label>
+                    <input name="city" id="city" class="form__input-field" placeholder="Salzburg">
+                 </div>
+             </fieldset>
+
+             <input type="submit" value="Bestellen">
+         </form>
+
+
+         <pre>
+            <code class="sg-snippet">
+                CODE
+            </code>
+          </pre>
+
+     </div>
 
     </section>
   </main>
