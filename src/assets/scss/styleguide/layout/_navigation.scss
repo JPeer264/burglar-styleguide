@@ -14,12 +14,12 @@
 			height: 100%;
 			margin: 0 20px;
 
-			line-height: $header-height;
+			line-height: $sg-header-height;
 			letter-spacing: 0.1em;
 			box-sizing: border-box;
 
 			&:hover {
-				color: $c-white;
+				color: $c-sg-white;
 				transition: color 0.2s ease-in;
 
 				&:after {
@@ -40,7 +40,7 @@
 				content: '';
 				width: 0px;
 				height: 1px;
-				background: $c-white;
+				background: $c-sg-white;
 				transition: width 0.2s ease-out,left 0.2s ease-out;
 			}
 		}
@@ -49,10 +49,10 @@
 			opacity: 0;
 			visibility: hidden;
 			position: absolute;
-			top: $header-height; left: -20px;
+			top: $sg-header-height; left: -20px;
 			width: calc(100% + 40px);
 
-			background: $c-header-bg;
+			background: $c-sg-header-bg;
 			text-align: center;
 
 			transition: opacity 0.25s ease-in;

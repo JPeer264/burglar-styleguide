@@ -1,7 +1,7 @@
 .sg-section {
    &__heading {
     padding-bottom: 10px;
-    border-bottom: 1px solid $c-thin-line;
+    border-bottom: 1px solid $c-sg-thin-line;
   }
 
   &__subheading {
@@ -17,7 +17,7 @@
     border-radius: 20px 20px 0 0;
     box-sizing: border-box;
 
-    color: $c-white;
+    color: $c-sg-white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
@@ -26,7 +26,7 @@
     position: relative;
     padding: 80px 15px 15px 15px;
     margin: 10px 0 10px 20px;
-    border: 1px solid $c-thin-line;
+    border: 1px solid $c-sg-thin-line;
     border-radius: 20px;
   }
 }

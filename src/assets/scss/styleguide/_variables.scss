@@ -1,14 +1,14 @@
 // Height
-$header-height: 60px;
+$sg-header-height: 60px;
 
 // Colors
-$c-header-bg: #343437;
-$c-header-text: #CCCFCF;
-$c-white: #F8FCFF;
-$c-thin-line: #ccc;
+$c-sg-header-bg: #343437;
+$c-sg-header-text: #CCCFCF;
+$c-sg-white: #F8FCFF;
+$c-sg-thin-line: #ccc;
 
 // Z-Layers
-$layers: (
+$sg-layers: (
 	nav: 2, 
 	content: 1, 
 	background: -1
