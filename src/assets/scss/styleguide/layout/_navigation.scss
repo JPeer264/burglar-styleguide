@@ -19,7 +19,7 @@
 			box-sizing: border-box;
 
 			&:hover {
-				color: $c-white;
+				color: $c-sg-white;
 				transition: color 0.2s ease-in;
 
 				&:after {
@@ -40,7 +40,7 @@
 				content: '';
 				width: 0px;
 				height: 1px;
-				background: $c-white;
+				background: $c-sg-white;
 				transition: width 0.2s ease-out,left 0.2s ease-out;
 			}
 		}
