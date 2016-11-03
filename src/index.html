@@ -19,18 +19,28 @@
 
     <nav class="sg-navigation">
       <ul class="sg-navigation__list">
-        <li class="sg-navigation__item"><a href="#branding">Branding</a></li>
-        <!-- TODO: These should be subitems -->
-        <li class="sg-navigation__item"><a href="#colors">Colors</a></li>
-        <li class="sg-navigation__item"><a href="#logo">Logo</a></li>
-        <li class="sg-navigation__item"><a href="#typography">Typography</a></li>
 
-        <li class="sg-navigation__item"><a href="#methodology">Methodologies</a></li>
-        <!-- TODO: These should be subitems -->
+        <li class="sg-navigation__group">
+          <a href="#branding">Branding</a>
+          <ul class="sg-navigation__subnav">
+            <li class="sg-navigation__item"><a href="#colors">Colors</a></li>
+            <li class="sg-navigation__item"><a href="#logo">Logo</a></li>
+            <li class="sg-navigation__item"><a href="#typography">Typography</a></li>
+          </ul>
+        </li>
 
-        <li class="sg-navigation__item"><a href="#components">Components</a></li>
-        <!-- TODO: These should be subitems -->
-        <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
+        <li class="sg-navigation__group">
+         <a href="#methodology">Methodologies</a>
+         <ul class="sg-navigation__subnav">
+           <li class="sg-navigation__item"><a href="#css">CSS</a></li>
+         </ul>
+
+         <li class="sg-navigation__group">
+           <a href="#components">Components</a>
+           <ul class="sg-navigation__subnav">
+            <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
+          </ul>
+        </li>
 
       </ul>
     </nav>
