@@ -4,8 +4,15 @@
 @import 'layout/sections';
 @import 'components/snippet';
 @import 'components/color';
+@import 'components/logo';
 
 // Typo
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.sg-section__heading, 
+.sg-section__subheading,
+.sg-section__subsubheading {
+  font-family: inherit;
 }

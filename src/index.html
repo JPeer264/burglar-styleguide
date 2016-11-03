@@ -28,7 +28,7 @@
   </header>
 
   <main class="sg-container">
-    <h1>Style Guide</h1>
+    <h1 class="sg-section__heading">Style Guide</h1>
 
     <section id="branding" class="sg-section sg-branding">
       <h2 class="sg-section__heading">Branding</h2>
@@ -37,28 +37,34 @@
         <h3 id="colors" class="sg-section__subheading">Colors</h3>
 
         <div class="sg-color__group">
-          <div class="sg-color__preview black">#202020</div>
-          <div class="sg-color__preview white inverted">#EEEEEE</div>
+          <div class="sg-color__preview sg-color__preview--fourth black">#202020</div>
+          <div class="sg-color__preview sg-color__preview--fourth dark-grey">#606060</div>
+          <div class="sg-color__preview sg-color__preview--fourth light-grey inverted">#CCCCCC</div>
+          <div class="sg-color__preview sg-color__preview--fourth white inverted">#EEEEEE</div>
         </div> 
 
         <div class="sg-color__group">
-          <div class="sg-color__preview green">#457355</div>
-          <div class="sg-color__preview beige inverted">#D7D9CC</div>
-          <div class="sg-color__preview brown">#8C715A</div>
-          <div class="sg-color__preview orange">#A65644</div>
-          <div class="sg-color__preview red">#401915</div>
+          <div class="sg-color__preview sg-color__preview--fifth green">#457355</div>
+          <div class="sg-color__preview sg-color__preview--fifth beige inverted">#D7D9CC</div>
+          <div class="sg-color__preview sg-color__preview--fifth brown">#8C715A</div>
+          <div class="sg-color__preview sg-color__preview--fifth orange">#A65644</div>
+          <div class="sg-color__preview sg-color__preview--fifth red">#401915</div>
         </div>
       </div>
       
       <div class="sg-section__group">
         <h3 id="logo" class="sg-section__subheading">Logo</h3>
 
-        <h4>Large</h4>
-        <img src="assets/img/logo_large.png"/>
+        <h4 class="sg-section__subsubheading">Large</h4>
 
-        <h4>Small</h4>
-        <img src="assets/img/logo_small.png"/>
+        <div class="sg-logo-section">
+          <img src="assets/img/logo_large.png"/>
+        </div>
 
+        <h4 class="sg-section__subsubheading">Small</h4>    
+        <div class="sg-logo-section">
+          <img src="assets/img/logo_small.png"/>
+        </div>
         <code class="sg-snippet">
           &lt;img src="assets/img/logo_small.png"/&gt;
         </code>
