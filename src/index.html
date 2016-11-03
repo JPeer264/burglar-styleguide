@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/global.css"> <!-- Compiled style -->
 
@@ -31,7 +32,7 @@
         <li class="sg-navigation__group">
          <a href="#methodology">Methodologies</a>
          <ul class="sg-navigation__subnav">
-           <li class="sg-navigation__item"><a href="#css">CSS</a></li>
+           <li class="sg-navigation__item"><a href="#code-style">Code Style</a></li>
          </ul>
 
          <li class="sg-navigation__group">
@@ -55,6 +56,11 @@
       <div class="sg-section__group">
         <h3 id="colors" class="sg-section__subheading">Colors</h3>
 
+      <div class="sg-section__description">
+        Description is still missing!
+      </div>
+      <hr/>
+
         <div class="sg-color__group sg-color__preview--fourth">
           <div class="sg-color__preview black">#202020 <span class="sg-color__name">$c-black</span></div>
           <div class="sg-color__preview dark-grey">#606060<span class="sg-color__name">$c-dark-grey</span></div>
@@ -74,30 +80,45 @@
       <div class="sg-section__group">
         <h3 id="logo" class="sg-section__subheading">Logo</h3>
 
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
+
         <h4 class="sg-section__subsubheading">Large</h4>
 
         <div class="sg-logo-section">
           <img src="assets/img/logo_large.png"/>
+          <img src="assets/img/logo_large_neg.png"/>
         </div>
 
         <pre>
           <code class="sg-snippet">
 &lt;img src="assets/img/logo_large.png"/&gt;
+&lt;img src="assets/img/logo_large_neg.png"/&gt;
           </code>
         </pre>
 
         <h4 class="sg-section__subsubheading">Small</h4>    
         <div class="sg-logo-section">
           <img src="assets/img/logo_small.png"/>
+          <img src="assets/img/logo_small_neg.png"/>
         </div>
+
         <pre>
           <code class="sg-snippet">
 &lt;img src="assets/img/logo_small.png"/&gt;
+&lt;img src="assets/img/logo_small_neg.png"/&gt;
           </code>
         </pre>
       </div>
       <div class="sg-section__group">
       <h3 id="typography" class="sg-section__subheading">Typography</h3>
+
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
 
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -110,11 +131,57 @@
        </div>
      </section>
 
+     <section id="methodology">
+
+      <h2 class="sg-section__heading">Methodology</h2>
+
+      <div class="sg-section__group">
+        <h3 id="code-style" class="sg-section__subheading">Code Style</h3>
+
+        <div class="sg-section__description">
+          This styleguide follows the <a href="https://github.com/airbnb/css">airbnb conventions</a> for writing CSS.
+          Here is a summary of the most important points:
+          <ul>
+            <li>Use soft tabs (2 spaces) for identation</li>
+            <li>Prefer dashes to camelCase when naming classes</li>
+            <li>Don't use ID selectors</li>
+            <li>When using multiple selectors, give each one an individual line</li>
+            <li>Only use line comments (in SASS)</li>
+            <li>Write detailed comments for code that is not self-explaining</li>
+          </ul>
+        </div>
+
+        <pre>
+          <code class="sg-snippet scss">
+.navigation {
+  width: 100%
+
+  // this is a comment
+  ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+          </code>
+        </pre>
+
+      </div>
+
+
+     </section>
+
      <section id="components" class="sg-section sg-components">
       <h2 class="sg-section__heading">Components</h2>
 
       <div class="sg-section__group">
         <h3 id="button" class="sg-section__subheading">Button</h3>
+
+        <div class="sg-section__description">
+          Description is still missing!
+        </div>
+        <hr/>
 
           <h4 class="sg-section__subsubheading">Normal</h4>
           <button class="button">Click me!</button>

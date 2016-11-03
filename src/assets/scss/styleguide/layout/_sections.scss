@@ -29,4 +29,12 @@
     border: 1px solid $c-sg-thin-line;
     border-radius: 20px;
   }
+
+  &__description {
+    margin: 20px 0;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
 }
