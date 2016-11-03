@@ -14,17 +14,25 @@
     color: $c-white;  
     text-align: center;
     font-size: 1.5em;
-
-    &--fifth {
-      width: 20%;
-    }
-
-    &--fourth {
-      width: 25%;
-    }
+    width: 100%;
   }
 
+  &--fifth &__preview {
+    width: 20%;
+  }
+
+  &--fourth &__preview {
+    width: 25%;
+  }
+
+  &__name {
+    display: block;
+    font-size: 1rem;
+  }
 }
+
+
+
 
 .inverted {
   color: $c-black;
