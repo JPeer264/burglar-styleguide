@@ -1,8 +1,9 @@
+/*
 $green: green !default;
 $red: red !default;
 $black: #000 !default;
 $white: #fff !default;
-
+*/
 // ================
 // BUTTON COMPONENT
 // ================
@@ -19,13 +20,18 @@ $white: #fff !default;
  */
 
 .button {
-  padding: .5rem .7rem;
+  padding: .7rem 2rem;
   margin-right: .5rem;
   margin-bottom: .5rem;
-  background: $black;
-  color: $white;
+  background: $c-brown;
+  
+  color: $c-white;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.2rem;
+
   border: 0;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 300ms;
 
@@ -45,9 +51,9 @@ $white: #fff !default;
 }
 
 .button--done {
-  background-color: $green;
+  background-color: $c-green;
 }
 
 .button--danger {
-  background-color: $red;
+  background-color: $c-red;
 }
