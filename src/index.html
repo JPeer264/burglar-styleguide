@@ -38,6 +38,7 @@
            <a href="#components">Components</a>
            <ul class="sg-navigation__subnav">
             <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
+               <li class="sg-navigation__item"><a href="#forms">Forms</a></li>
           </ul>
         </li>
 
@@ -142,6 +143,84 @@
           </pre>
 
       </div>
+
+     <div class="sg-section__group">
+
+         <h3 id="forms" class="sg-section__subheading">Forms</h3>
+
+         <form class="form">
+             <fieldset class="form__fieldset">
+                 <legend>Choose your Burger:</legend>
+
+             <label for="">
+                 Size
+                 <select>
+                     <option value="" disabled selected>Select...</option>
+                     <option>Small</option>
+                     <option>Medium</option>
+                     <option>Large</option>
+                 </select>
+             </label>
+
+             <fieldset>
+                 <label for="mastercard">
+                     Mastercard</label><input type="radio" id="mastercard" name="payment-method" value="Mastercard">
+                 </label>
+                 <label for="visa">
+                     Visa</label><input type="radio" id="visa" name="payment-method" value="Visa">
+                 </label>
+                 <label for="american-express">
+                     American Express</label><input type="radio" id="american-express" name="payment-method" value="AmericanExpress">
+                 </label>
+
+             </fieldset>
+
+             <label for="comments">
+                Comments: <textarea name="comments" id="comments" rows="4" cols ="50"></textarea>
+             </label>
+
+             </fieldset>
+
+             <fieldset class="form__fieldset">
+                 <legend>Personal information:</legend>
+
+                 <div class="form__input">
+                    <label for="first-name" class="form__label">First name:</label>
+                    <input name="first-name" id="first-name" class="form__input-field" placeholder="John">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="surname" class="form__label">Surname:</label>
+                    <input name="surname" id="surname" class="form__input-field" placeholder="Doe">
+                </div>
+
+                 <div class="form__input">
+                    <label for="street" class="form__label">Street</label>
+                    <input name="street" id="street" class="form__input-field" placeholder="Bahnhofstrasse 5">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="zip" class="form__label">ZIP:</label>
+                    <input name="zip" id="zip" class="form__input-field" placeholder="5020">
+                 </div>
+
+                 <div class="form__input">
+                    <label for="city" class="form__label">City</label>
+                    <input name="city" id="city" class="form__input-field" placeholder="Salzburg">
+                 </div>
+             </fieldset>
+
+             <input type="submit" value="Bestellen">
+         </form>
+
+
+         <pre>
+            <code class="sg-snippet">
+                CODE
+            </code>
+          </pre>
+
+     </div>
 
     </section>
   </main>

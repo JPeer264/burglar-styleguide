@@ -1,2 +1,43 @@
 .form {
+
+  &__fieldset {
+    margin: 20px 0 0 0;
+    padding: 25px 25px 15px 25px;
+
+    border: 1px solid $c-light-grey;
+    border-radius: 6px;
+    background: $c-white;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    width: 400px;
+    margin: 0 20px 15px 0;
+    float: left;
+  }
+
+  &__input-field {
+    height: 34px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 0 10px 0 10px;
+
+    border: 1px solid $c-light-grey;
+    border-radius: 5px;
+
+    &:focus, &:hover {
+      border: 1px solid $c-dark-grey;
+    }
+  }
+
+  &__textarea {
+
+  }
+
 }
