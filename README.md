@@ -87,6 +87,9 @@ grunt serve:dev
 ##### Font Size
 [Augmented Fourth Scale](http://type-scale.com/)
 
+#### Icons
+Fontawesome
+
 ### CSS Methodology
 
 - [Code style rules (airbnb)](#code-style-rules)
