@@ -1,0 +1,14 @@
+.link {
+    font-weight: 700;
+
+    &[href*="http"]::after {
+        content: '\f08e';
+        font-family: 'Fontawesome';
+        font-size: 0.75em;
+        margin-left: 0.5em;
+    }
+
+    &[href$=".pdf"]::after {
+        content: '\f016 ';
+    }
+}
