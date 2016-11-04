@@ -1,7 +1,3 @@
-$global-margin: 1rem !default;
-$black: #000 !default;
-$white: #fff !default;
-
 // ================
 // SOCIAL COMPONENT
 // ================
@@ -21,31 +17,52 @@ $white: #fff !default;
  */
 
 .social {
+  display: flex;
+  justify-content: space-around;
 }
 
 .social__item {
-  width: 40px;
-  height: 40px;
-  margin-left: $global-margin;
+  color: $c-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 
-  a, i {
-    height: inherit;
-    width: inherit;
-    color: #fefefe;
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+
+
+  &::after {
+    font-family: 'Fontawesome';
+    color: $c-white;
+  }
+
+  &[href*="facebook"] {
+    background: #3b5998;
+
+    &::after {
+      content:'\f09a';
+    }
+  }
+
+  &[href*="twitter"] {
+    background: #4099FF;
+
+    &::after {
+      content:'\f099';
+    }
+  }
+
+  &[href*="pinterest"] {
+    background: #bd081c;
+
+    &::after {
+      content:'\f231';
+    }
   }
 
   &:first-child {
     margin-left: 0;
   }
-}
-
-.social__item--twitter {
-  background: #4099FF;
-  color: $white;
-}
-
-.social__item--facebook {
-  background: #3b5998;
-  color: $white;
 }
