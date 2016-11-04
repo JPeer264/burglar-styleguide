@@ -1,5 +1,7 @@
 # Burglar Styleguide
 
+> The styleguide is published on [JPeer.at](https://projects.jpeer.at/burglar-styleguide)
+
 ## Contents
 
 - [Usage](#usage)
