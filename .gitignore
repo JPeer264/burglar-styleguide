@@ -6,4 +6,6 @@ bower_components
 tmp
 dist
 
+# IDEs and editors
 .vscode
+.idea

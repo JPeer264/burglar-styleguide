@@ -30,7 +30,6 @@
   height: 40px;
   margin-left: 1rem;
 
-
   &::after {
     font-family: 'Fontawesome';
     color: $c-white;
@@ -40,7 +39,7 @@
     background: #3b5998;
 
     &::after {
-      content:'\f09a';
+      content: '\f09a';
     }
   }
 
@@ -48,7 +47,7 @@
     background: #4099FF;
 
     &::after {
-      content:'\f099';
+      content: '\f099';
     }
   }
 
@@ -56,7 +55,7 @@
     background: #bd081c;
 
     &::after {
-      content:'\f231';
+      content: '\f231';
     }
   }
 

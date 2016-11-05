@@ -1,23 +1,23 @@
 .list {
 
-    padding-left: 1rem;
-    
-    &__item {
-        font-size: 1.2rem;
-        vertical-align: middle;
+  padding-left: 1rem;
 
-        &::before {
-            content: '🍔';
-            margin-right: 0.5rem;
-        }
+  &__item {
+    font-size: 1.2rem;
+    vertical-align: middle;
 
-        &--fries::before {
-            content: '🍟';
-        }
+    &::before {
+      content: '🍔';
+      margin-right: 0.5rem;
     }
 
-    &__heading {
-        margin-top: 0.5em;
+    &--fries::before {
+      content: '🍟';
     }
+  }
+
+  &__heading {
+    margin-top: 0.5em;
+  }
 
 }

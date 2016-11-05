@@ -83,6 +83,7 @@ grunt serve:dev
 ##### Font Family
 - Heading: Abril Fatface
 - Body: Open Sans Condensed
+- First letter Capital?
 
 ##### Font Size
 [Augmented Fourth Scale](http://type-scale.com/)
