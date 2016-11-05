@@ -4,7 +4,9 @@
     menu = document.getElementsByClassName('navigation__list')[0],
     listItems = document.getElementsByClassName('navigation__list-item'),
     listLinks = document.getElementsByClassName('navigation__link');
-  
+
+  var breakpoint = 800;
+
   burger.addEventListener('click', function (e) {
 
     toggleClass(menu, 'navigation__list--active');
@@ -27,10 +29,22 @@
     }
   }
 
+  function removeClassFromElement (element, className) {
+    element.className = element.className.replace(className, '');
+  }
+
   function removeClassFromElements (elements, className) {
     for (var i = 0; i < elements.length; i++) {
-      elements[i].className = elements[i].className.replace(className, '');
+      removeClassFromElement(elements[i], className);
     }
   }
-  
+
+  window.addEventListener('resize', function (e) {
+
+    if (window.innerWidth >= breakpoint) {
+      removeClassFromElement(menu, 'navigation__list--active')
+    }
+
+  });
+
 })();

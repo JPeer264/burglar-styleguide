@@ -24,12 +24,11 @@
     display: none;
     text-align: center;
 
-    background: $c-green;
-    color: $c-white;
+    background: darken($c-beige, 10%);
 
     &:nth-child(2n) {
       background: $c-beige;
-      color: $c-black;
+      //color: $c-black;
     }
 
     .navigation__list--active & {
@@ -41,8 +40,8 @@
       // the problem is that the nth-child selector is stronger
       // I don't know how i could do something like .green.green
       // with scss and the &
-      background: $c-brown !important;
-      color: $c-white !important;
+      //background: $c-brown !important;
+      //color: $c-white !important;
       box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
     }
   }
@@ -91,6 +90,7 @@
 
     &__list-item {
       display: inline-block;
+      background: $c-beige;
     }
 
     &__link {
