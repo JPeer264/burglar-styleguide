@@ -2,11 +2,12 @@
   // Elements
   var navItems = document.getElementsByClassName('js-nav-item');
   var sections = document.getElementsByClassName('js-section');
+  var logo = document.getElementsByClassName('sg-logo')[0];
   var subSections = [].slice.call(document.getElementsByClassName('sg-section__group'));
   var headings = [].slice.call(document.getElementsByClassName('sg-section__heading'));
 
   // Initial states
-  TweenLite.set(subSections, { autoAlpha: 0 });
+  TweenLite.set([subSections,logo], { autoAlpha: 0 });
 
   // Set Click Events on Navigation
   for (var i = 0; i < navItems.length; i++) {
@@ -32,15 +33,11 @@
 
   // animates elements in when page loaded
   document.addEventListener("DOMContentLoaded", function() {
-    checkElements(subSections);
-    TweenMax.staggerFromTo(headings, 0.6, {
-      autoAlpha: 0,
-      x: 40
-    }, {
-      autoAlpha: 1,
-      x: 0,
-      ease: Power2.easeInOut,
-    }, 0.1);
+    TweenLite.delayedCall(1, checkElements, [subSections]); 
+    TweenMax.staggerFromTo(headings, 0.6, 
+      { autoAlpha: 0, x: 40}, 
+      { autoAlpha: 1,x: 0, ease: Power2.easeInOut, delay: 0.6}, 0.1);
+    TweenMax.fromTo(logo, 0.5, {autoAlpha: 0, x: -500},{autoAlpha: 1, x: 0, delay: 0.3});
   });
 
   // Helpers
