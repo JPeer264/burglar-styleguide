@@ -1,20 +1,74 @@
 .form {
 
   &__fieldset {
-    margin: 20px 0 0 0;
-    padding: 25px 25px 15px 25px;
-
+    margin: 10px 0;
+    padding: 20px 25px 15px 25px;
     border: 1px solid $c-light-grey;
     border-radius: 6px;
     background: $c-white;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   &__label {
     display: block;
     margin-bottom: 4px;
   }
+  
+  &__select {
+    margin-bottom: 20px;
+    width: 240px;
+    font-size: 1.2rem;
+    font-family: inherit;
+  }
 
-  &__input {
+  &__input-radio {
+    display: none;
+
+    &+::before {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      content: '';
+      border-radius: 100%;
+      margin-right: 6px;
+      border: 1px solid $c-dark-grey;
+      transition: background .25s ease;
+    }
+
+    &:hover+::before, &:checked+::before {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: none;
+      background: $c-green;
+    }
+
+    &+label {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-right: 22px;
+      color: $c-dark-grey;
+      font-weight: bold;
+      transition: all .25s ease;
+    }
+
+    &:hover+label, &:checked+label {
+      color: $c-green;
+      cursor: pointer;
+    }
+  }
+
+  &__textarea {
+    border: 2px solid $c-light-grey;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 1em;
+    resize: vertical;
+  }
+
+  &__input-group {
     width: 400px;
     margin: 0 20px 15px 0;
     float: left;
@@ -23,21 +77,33 @@
   &__input-field {
     height: 34px;
     width: 100%;
-
     box-sizing: border-box;
-
     padding: 0 10px 0 10px;
 
-    border: 1px solid $c-light-grey;
+    border: 2px solid $c-light-grey;
     border-radius: 5px;
 
+    transition: all .25s ease;
+
     &:focus, &:hover {
-      border: 1px solid $c-dark-grey;
+      border: 2px solid $c-dark-grey;
+    }
+
+    &--required {
+      padding-right: 20px;
+      background: url(../img/input-required.png) no-repeat right #fff;
+    }
+
+    &--valid {
+      border: 2px solid $c-green;
+      padding-right: 34px;
+      background: url(../img/input-check.png) no-repeat right #fff;
+    }
+
+    &--invalid {
+      border: 2px solid $c-red;
+      padding-right: 40px;
+      background: url(../img/input-x.png) no-repeat right #fff;
     }
   }
-
-  &__textarea {
-
-  }
-
 }
