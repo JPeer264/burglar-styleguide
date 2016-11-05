@@ -33,17 +33,18 @@
             <li class="sg-navigation__group">
                 <a href="#methodology" class="js-nav-item">Methodologies</a>
                 <ul class="sg-navigation__subnav">
-                    <li class="sg-navigation__item"><a href="#code-style">Code Style</a></li>
+                    <li class="sg-navigation__item"><a href="#code-style" class="js-nav-item">Code Style</a></li>
                 </ul>
 
             <li class="sg-navigation__group">
                 <a href="#components" class="js-nav-item">Components</a>
                 <ul class="sg-navigation__subnav">
-                    <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
-                    <li class="sg-navigation__item"><a href="#forms">Forms</a></li>
-                    <li class="sg-navigation__item"><a href="#social-menu">Social Menu</a></li>
-                    <li class="sg-navigation__item"><a href="#list">List</a></li>
-                    <li class="sg-navigation__item"><a href="#link">Link</a></li>
+                    <li class="sg-navigation__item"><a href="#button" class="js-nav-item">Buttons</a></li>
+                    <li class="sg-navigation__item"><a href="#forms" class="js-nav-item">Forms</a></li>
+                    <li class="sg-navigation__item"><a href="#social-menu" class="js-nav-item">Social Menu</a></li>
+                    <li class="sg-navigation__item"><a href="#list" class="js-nav-item">List</a></li>
+                    <li class="sg-navigation__item"><a href="#link" class="js-nav-item">Link</a></li>
+                    <li class="sg-navigation__item"><a href="#navbar" class="js-nav-item">Navigation</a></li>
                 </ul>
             </li>
 
@@ -61,7 +62,7 @@
             <h3 class="sg-section__subheading">Colors</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+               The top color palette is the basic color palette to be used for text, backgrounds and borders. The second color palette is used for highlights and areas we want to draw more attention to.
             </div>
             <hr/>
 
@@ -86,7 +87,7 @@
             <h3 class="sg-section__subheading">Logo</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                The following images show with what margins the large and small logo should be placed.
             </div>
             <hr/>
 
@@ -121,7 +122,7 @@
             <h3 class="sg-section__subheading">Typography</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                This sections shows the margins and code snippets for the different headings and text
             </div>
             <hr/>
 
@@ -142,12 +143,12 @@
         </div>
     </section>
 
-    <section id="methodology">
+    <section id="methodology" class="sg-section js-section">
 
         <h2 class="sg-section__heading">Methodology</h2>
 
-        <div class="sg-section__group">
-            <h3 id="code-style" class="sg-section__subheading">Code Style</h3>
+        <div id="code-style" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading ">Code Style</h3>
 
             <div class="sg-section__description">
                 This styleguide follows the <a class="sg-link" href="https://github.com/airbnb/css">airbnb
@@ -164,22 +165,51 @@
             </div>
 
             <pre>
-          <code class="sg-snippet scss">
-.navigation {
-  width: 100%
+              <code class="sg-snippet scss">
+  .navigation {
+    width: 100%
 
-  // this is a comment
-  ul {
-    float: right;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // this is a comment
+    ul {
+      float: right;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
   }
-}
           </code>
         </pre>
 
+      </div>
+
+      <div id="class-naming" class="sg-section__group js-section">
+        <h3 class="sg-section__subheading ">Class Naming Convention</h3>
+        <div class="sg-section__description">
+          For class naming this styleguide follows the <a class="sg-link" href="http://getbem.com/introduction/">BEM</a> syntax.
+
+          Here is a summary of the most important points:
+          <ul class="sg-section__list">
+            <li>Block: Standalone entity that is meaningful on its own. Eg. menu</li>
+            <li>Element: Parts of a block and have no standalone meaning. They are semantically tied to its block. Eg. menu item</li>
+            <li>Modifier: Flags on blocks or elements. Use them to change appearance or behavior. Eg. disabled</li>
+          </ul>
         </div>
+            <pre>
+              <code class="sg-snippet scss">
+          .list {
+
+            &__item {
+              font-size: 1.2rem;
+
+              &--fries::before {
+                content: '🍟';
+              }
+            }
+          }
+          </code>
+        </pre>
+
+      </div>
     </section>
 
     <section id="components" class="sg-section sg-components js-section">
@@ -190,7 +220,7 @@
             <h3 class="sg-section__subheading">Button</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                A set of normal and full-width buttons are provided. For normal actions the regular button is to be used, for forms or actions that are completed, the done button should be used. To alert the user that the danger button should be used. 
             </div>
             <hr/>
 
@@ -222,10 +252,12 @@
 
         </div>
 
-        <div class="sg-section__group">
+        <div id="forms" class="sg-section__group js-section">
 
-            <h3 id="forms" class="sg-section__subheading js-section">Forms</h3>
-
+            <h3 class="sg-section__subheading ">Forms</h3>
+            <div class="sg-section__description">
+                Use fieldsets to seperate areas of concern. Use the * to show that a field is required and always provide a placeholder text to let the user know what should be typed in. Also provide labels for every input field.
+            </div>
             <form class="form">
                 <fieldset class="form__fieldset">
                     <legend>Choose your Burger:</legend>
@@ -298,11 +330,11 @@
 
         </div>
 
-        <div class="sg-section__group">
-            <h3 id="social-menu" class="sg-section__subheading js-section">Social Menu</h3>
+        <div id="social-menu" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading js-section">Social Menu</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                There are three social buttons which can be used where it might be needed. It's not necessary to specify a special class, since the buttons is styled according to it's link.
             </div>
             <hr/>
 
@@ -324,20 +356,19 @@
       </pre>
         </div> <!-- social menu section-->
 
-        <div class="sg-section__group js-section">
-            <h3 id="list" class="sg-section__subheading">List</h3>
+        <div id="list"  class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">List</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                Our list provides a set of different emojis to be shown in front of the list item.
             </div>
             <hr/>
 
             <h3 class="list__heading">Classic Burglar</h3>
             <ul class="list">
-                <li class="list__item">Tomatoes</li>
-                <li class="list__item">Cheese</li>
-                <li class="list__item">Salad</li>
-                <li class="list__item">Bacon</li>
+                <li class="list__item list__item--tomatoes">Tomatoes</li>
+                <li class="list__item list__item--cheese">Cheese</li>
+                <li class="list__item list__item--bacon">Bacon</li>
                 <li class="list__item list__item--fries">French Fries</li>
             </ul>
 
@@ -345,10 +376,9 @@
         <code class="sg-snippet">
 &lt;h3 class=&quot;list__heading&quot;&gt;Classic Burglar&lt;/h3&gt;
 &lt;ul class=&quot;list&quot;&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Tomatoes&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Cheese&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Salad&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Bacon&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--tomatoes&quot;&gt;Tomatoes&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--cheese&quot;&gt;Cheese&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--bacon&quot;&gt;Bacon&lt;/li&gt;
   &lt;li class=&quot;list__item list__item--fries&quot;&gt;French Fries&lt;/li&gt;
 &lt;/ul&gt;
         </code>
@@ -356,11 +386,11 @@
 
         </div> <!-- list section -->
 
-        <div class="sg-section__group js-section">
-            <h3 id="link" class="sg-section__subheading">Link</h3>
+        <div id="link" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">Link</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                The links in this styleguide are seperated by icons to show if it's an internal, external oder document link.
             </div>
             <hr>
 
@@ -383,12 +413,12 @@
         </pre>
         </div> <!-- link section -->
 
-        <div class="sg-section__group js-section">
-            <h3 id="navbar" class="sg-section__subheading">Navigation</h3>
+        <div id="navbar" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">Navigation</h3>
 
 
             <div class="sg-section__description">
-                Description is still missing!
+                The navigation is to be used like the following example. 
             </div>
             <hr>
 
