@@ -13,6 +13,25 @@ body {
 
 p {
   margin-bottom: 1.3em;
+  text-align: justify;
+  text-justify: inter-word;
+
+  &:first-letter {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 3rem;
+    line-height: 0.8;
+    float: left;
+    margin-right: 3px;
+    margin-top: 3px;
+  }
+}
+
+p + p:first-letter {
+  font-family:inherit;
+  font-size: inherit;
+  float: none;
+  margin-right: 0;
+  line-height: inherit;
 }
 
 h1, h2, h3, h4 {
