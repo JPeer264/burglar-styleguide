@@ -21,3 +21,12 @@ body {
 .sg-link {
   text-decoration: underline;
 }
+
+// not worth making an extra file for this
+.sg-icon {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+}
