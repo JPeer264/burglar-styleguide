@@ -227,51 +227,52 @@
             </div>
 
             <pre>
-              <code class="sg-snippet scss">
-  .navigation {
-    width: 100%
+                <code class="sg-snippet scss">
+.navigation {
+  width: 100%
 
-    // this is a comment
-    ul {
-      float: right;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+  // this is a comment
+  ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+                </code>
+            </pre>
+        </div> <!-- code style section -->
+
+        <div id="class-naming" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading ">Class Naming Convention</h3>
+            <div class="sg-section__description">
+              For class naming this styleguide follows the <a class="sg-link" href="http://getbem.com/introduction/">BEM</a> syntax.
+
+              Here is a summary of the most important points:
+              <ul class="sg-section__list">
+                <li>Block: Standalone entity that is meaningful on its own. Eg. menu</li>
+                <li>Element: Parts of a block and have no standalone meaning. They are semantically tied to its block. Eg. menu__item</li>
+                <li>Modifier: Flags on blocks or elements. Use them to change appearance or behavior. Eg. menu__item--disabled</li>
+              </ul>
+            </div>
+            <pre>
+                <code class="sg-snippet scss">
+.list {
+
+  &__item {
+
+    font-size: 1.2rem;
+
+    &--fries::before {
+      content: '🍟';
     }
   }
-          </code>
-        </pre>
+}
+                </code>
+            </pre>
 
-      </div>
+        </div> <!-- class naming section -->
 
-      <div id="class-naming" class="sg-section__group js-section">
-        <h3 class="sg-section__subheading ">Class Naming Convention</h3>
-        <div class="sg-section__description">
-          For class naming this styleguide follows the <a class="sg-link" href="http://getbem.com/introduction/">BEM</a> syntax.
-
-          Here is a summary of the most important points:
-          <ul class="sg-section__list">
-            <li>Block: Standalone entity that is meaningful on its own. Eg. menu</li>
-            <li>Element: Parts of a block and have no standalone meaning. They are semantically tied to its block. Eg. menu__item</li>
-            <li>Modifier: Flags on blocks or elements. Use them to change appearance or behavior. Eg. menu__item--disabled</li>
-          </ul>
-        </div>
-            <pre>
-              <code class="sg-snippet scss">
-          .list {
-
-            &__item {
-              font-size: 1.2rem;
-
-              &--fries::before {
-                content: '🍟';
-              }
-            }
-          }
-          </code>
-        </pre>
-
-      </div>
     </section>
 
     <section id="components" class="sg-section sg-components js-section">
@@ -312,7 +313,7 @@
             </code>
           </pre>
 
-        </div>
+        </div> <!-- button section -->
 
         <div id="forms" class="sg-section__group js-section">
 
@@ -444,7 +445,7 @@
                 </code>
             </pre>
 
-        </div>
+        </div> <!-- forms section -->
 
         <div id="social-menu" class="sg-section__group js-section">
             <h3 class="sg-section__subheading js-section">Social Menu</h3>
