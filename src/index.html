@@ -265,22 +265,22 @@
                 <fieldset class="form__fieldset">
                     <div class="form__input-group">
                         <label for="optional-field" class="form__label">Optional Field:</label>
-                        <input type="text" name="optional-field" id="optional-field" class="form__input-field form__input-field--optional">
+                        <input type="text" name="optional-field" id="optional-field" class="form__input-field form__input-field--optional" placeholder="John Doe">
                     </div>
 
                     <div class="form__input-group">
-                        <label for="required-field" class="form__label">Required Field:</label>
-                        <input type="text" name="required-field" id="required-field" class="form__input-field form__input-field--required"required>
-                    </div>
-
-                    <div class="form__input-group">
-                        <label for="valid-field" class="form__label">Valid Field:</label>
-                        <input type="text" name="valid-field" id="valid-field" class="form__input-field form__input-field--valid">
+                        <label for="required-field" class="form__label">Required Field: *</label>
+                        <input type="text" name="required-field" id="required-field" class="form__input-field form__input-field--required" placeholder="Hauptstr. 5" required>
                     </div>
 
                     <div class="form__input-group">
                         <label for="invalid-field" class="form__label">Invalid Field:</label>
-                        <input type="text" name="invalid-field" id="invalid-field" class="form__input-field form__input-field--invalid">
+                        <input type="text" name="invalid-field" id="invalid-field" class="form__input-field form__input-field--invalid" placeholder="5020">
+                    </div>
+
+                    <div class="form__input-group">
+                        <label for="valid-field" class="form__label">Valid Field:</label>
+                        <input type="text" name="valid-field" id="valid-field" class="form__input-field form__input-field--valid" placeholder="Salzburg">
                     </div>
                 </fieldset>
             </form>
