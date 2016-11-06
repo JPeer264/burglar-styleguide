@@ -21,10 +21,12 @@
     background: $c-beige;
     color: $c-sg-header-bg;
 
+    img {
+      max-height: 100%;
+    }
+
     &__image {
-      flex: 0;
-      height: 40%;
-      width: auto;
+      height: $sg-header-height / 2;
     }
   }
 }
