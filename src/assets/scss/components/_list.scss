@@ -14,6 +14,15 @@
     &--fries::before {
       content: '🍟';
     }
+    &--tomatoes::before {
+      content: '🍅';
+    }
+    &--cheese::before {
+      content: '🧀';
+    }
+     &--bacon::before {
+      content: '🍖';
+    }
   }
 
   &__heading {

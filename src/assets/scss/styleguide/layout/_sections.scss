@@ -9,18 +9,17 @@
     top: 0;
     left: 0;
     width: 100%;
-
     display: block;
     margin: 0;
     padding: 20px;
-
+    
     background: #343437;
     border-radius: 20px 20px 0 0;
     box-sizing: border-box;
-
     color: $c-sg-white;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
     text-transform: uppercase;
+
   }
 
   &__group {

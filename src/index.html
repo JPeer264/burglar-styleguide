@@ -33,19 +33,19 @@
             <li class="sg-navigation__group">
                 <a href="#methodology" class="js-nav-item">Methodologies</a>
                 <ul class="sg-navigation__subnav">
-                    <li class="sg-navigation__item"><a href="#code-style">Code Style</a></li>
+                    <li class="sg-navigation__item"><a href="#code-style" class="js-nav-item">Code Style</a></li>
+                    <li class="sg-navigation__item"><a href="#class-naming" class="js-nav-item">Class Naming</a></li>
                 </ul>
 
             <li class="sg-navigation__group">
                 <a href="#components" class="js-nav-item">Components</a>
                 <ul class="sg-navigation__subnav">
-                    <li class="sg-navigation__item"><a href="#button">Buttons</a></li>
-                    <li class="sg-navigation__item"><a href="#forms">Forms</a></li>
-                    <li class="sg-navigation__item"><a href="#social-menu">Social Menu</a></li>
-                    <li class="sg-navigation__item"><a href="#list">List</a></li>
-                    <li class="sg-navigation__item"><a href="#link">Link</a></li>
-                    <li class="sg-navigation__item"><a href="#navbar">Navigation</a></li>
-
+                    <li class="sg-navigation__item"><a href="#button" class="js-nav-item">Buttons</a></li>
+                    <li class="sg-navigation__item"><a href="#forms" class="js-nav-item">Forms</a></li>
+                    <li class="sg-navigation__item"><a href="#social-menu" class="js-nav-item">Social Menu</a></li>
+                    <li class="sg-navigation__item"><a href="#list" class="js-nav-item">List</a></li>
+                    <li class="sg-navigation__item"><a href="#link" class="js-nav-item">Link</a></li>
+                    <li class="sg-navigation__item"><a href="#navbar" class="js-nav-item">Navigation</a></li>
                 </ul>
             </li>
 
@@ -63,7 +63,7 @@
             <h3 class="sg-section__subheading">Colors</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+               The top color palette is the basic color palette to be used for text, backgrounds and borders. The second color palette is used for highlights and areas we want to draw more attention to.
             </div>
             <hr/>
 
@@ -88,7 +88,7 @@
             <h3 class="sg-section__subheading">Logo</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                The following images show with what margins the large and small logo should be placed.
             </div>
             <hr/>
 
@@ -123,7 +123,7 @@
             <h3 class="sg-section__subheading">Typography</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                This sections shows the margins and code snippets for the different headings and text
             </div>
             <hr/>
 
@@ -144,12 +144,12 @@
         </div>
     </section>
 
-    <section id="methodology">
+    <section id="methodology" class="sg-section js-section">
 
         <h2 class="sg-section__heading">Methodology</h2>
 
-        <div class="sg-section__group">
-            <h3 id="code-style" class="sg-section__subheading">Code Style</h3>
+        <div id="code-style" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading ">Code Style</h3>
 
             <div class="sg-section__description">
                 This styleguide follows the <a class="sg-link" href="https://github.com/airbnb/css">airbnb
@@ -166,22 +166,51 @@
             </div>
 
             <pre>
-          <code class="sg-snippet scss">
-.navigation {
-  width: 100%
+              <code class="sg-snippet scss">
+  .navigation {
+    width: 100%
 
-  // this is a comment
-  ul {
-    float: right;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    // this is a comment
+    ul {
+      float: right;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
   }
-}
           </code>
         </pre>
 
+      </div>
+
+      <div id="class-naming" class="sg-section__group js-section">
+        <h3 class="sg-section__subheading ">Class Naming Convention</h3>
+        <div class="sg-section__description">
+          For class naming this styleguide follows the <a class="sg-link" href="http://getbem.com/introduction/">BEM</a> syntax.
+
+          Here is a summary of the most important points:
+          <ul class="sg-section__list">
+            <li>Block: Standalone entity that is meaningful on its own. Eg. menu</li>
+            <li>Element: Parts of a block and have no standalone meaning. They are semantically tied to its block. Eg. menu__item</li>
+            <li>Modifier: Flags on blocks or elements. Use them to change appearance or behavior. Eg. menu__item--disabled</li>
+          </ul>
         </div>
+            <pre>
+              <code class="sg-snippet scss">
+          .list {
+
+            &__item {
+              font-size: 1.2rem;
+
+              &--fries::before {
+                content: '🍟';
+              }
+            }
+          }
+          </code>
+        </pre>
+
+      </div>
     </section>
 
     <section id="components" class="sg-section sg-components js-section">
@@ -192,7 +221,7 @@
             <h3 class="sg-section__subheading">Button</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                A set of normal and full-width buttons are provided. For normal actions the regular button is to be used, for forms or actions that are completed, the done button should be used. To alert the user that the danger button should be used. 
             </div>
             <hr/>
 
@@ -224,87 +253,143 @@
 
         </div>
 
-        <div class="sg-section__group">
+        <div id="forms" class="sg-section__group js-section">
 
-            <h3 id="forms" class="sg-section__subheading js-section">Forms</h3>
-
+            <h3 class="sg-section__subheading ">Forms</h3>
+            <div class="sg-section__description">
+                Use fieldsets to seperate areas of concern. Use the * to show that a field is required and always provide a placeholder text to let the user know what should be typed in. Also provide labels for every input field.
+            </div>
+            
             <form class="form">
-                <fieldset class="form__fieldset">
-                    <legend>Choose your Burger:</legend>
-
-                    <label for="">
-                        Size
-                        <select>
-                            <option value="" disabled selected>Select...</option>
-                            <option>Small</option>
-                            <option>Medium</option>
-                            <option>Large</option>
-                        </select>
-                    </label>
-
-                    <fieldset>
-                        <label for="mastercard">Mastercard</label>
-                        <input type="radio" id="mastercard" name="payment-method" value="Mastercard">
-
-                        <label for="visa">Visa</label>
-                        <input type="radio" id="visa" name="payment-method" value="Visa">
-
-                        <label for="american-express">American Express</label>
-                        <input type="radio" id="american-express" name="payment-method" value="AmericanExpress">
-                    </fieldset>
-
-                    <label for="comments">
-                        Comments: <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
-                    </label>
-
-                </fieldset>
 
                 <fieldset class="form__fieldset">
-                    <legend>Personal information:</legend>
-
-                    <div class="form__input">
-                        <label for="first-name" class="form__label">First name:</label>
-                        <input name="first-name" id="first-name" class="form__input-field" placeholder="John">
+                    <div class="form__input-group">
+                        <label for="optional-field" class="form__label">Optional Field:</label>
+                        <input type="text" name="optional-field" id="optional-field" class="form__input-field form__input-field--optional">
                     </div>
 
-                    <div class="form__input">
-                        <label for="surname" class="form__label">Surname:</label>
-                        <input name="surname" id="surname" class="form__input-field" placeholder="Doe">
+                    <div class="form__input-group">
+                        <label for="required-field" class="form__label">Required Field:</label>
+                        <input type="text" name="required-field" id="required-field" class="form__input-field form__input-field--required"required>
                     </div>
 
-                    <div class="form__input">
-                        <label for="street" class="form__label">Street</label>
-                        <input name="street" id="street" class="form__input-field" placeholder="Bahnhofstrasse 5">
+                    <div class="form__input-group">
+                        <label for="valid-field" class="form__label">Valid Field:</label>
+                        <input type="text" name="valid-field" id="valid-field" class="form__input-field form__input-field--valid">
                     </div>
 
-                    <div class="form__input">
-                        <label for="zip" class="form__label">ZIP:</label>
-                        <input name="zip" id="zip" class="form__input-field" placeholder="5020">
-                    </div>
-
-                    <div class="form__input">
-                        <label for="city" class="form__label">City</label>
-                        <input name="city" id="city" class="form__input-field" placeholder="Salzburg">
+                    <div class="form__input-group">
+                        <label for="invalid-field" class="form__label">Invalid Field:</label>
+                        <input type="text" name="invalid-field" id="invalid-field" class="form__input-field form__input-field--invalid">
                     </div>
                 </fieldset>
-
-                <input type="submit" class="button button--done" value="Bestellen">
             </form>
 
+            <pre>
+                <code class="sg-snippet">
+&lt;form class=&quot;form&quot;&gt;
+    &lt;fieldset class=&quot;form__fieldset&quot;&gt;
+        &lt;div class=&quot;form__input-group&quot;&gt;
+            &lt;label for=&quot;optional-field&quot; class=&quot;form__label&quot;&gt;Optional Field:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;optional-field&quot; id=&quot;optional-field&quot; class=&quot;form__input-field form__input-field--optional&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form__input-group&quot;&gt;
+            &lt;label for=&quot;required-field&quot; class=&quot;form__label&quot;&gt;Required Field:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;required-field&quot; id=&quot;required-field&quot; class=&quot;form__input-field form__input-field--required&quot; required&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form__input-group&quot;&gt;
+            &lt;label for=&quot;valid-field&quot; class=&quot;form__label&quot;&gt;Valid Field:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;valid-field&quot; id=&quot;valid-field&quot; class=&quot;form__input-field form__input-field--valid&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form__input-group&quot;&gt;
+            &lt;label for=&quot;invalid-field&quot; class=&quot;form__label&quot;&gt;Invalid Field:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;invalid-field&quot; id=&quot;invalid-field&quot; class=&quot;form__input-field form__input-field--invalid&quot;&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+
+            <h4 class="sg-section__subsubheading">Radio buttons</h4>
+
+            <fieldset class="form__fieldset">
+                <label class="form__label">Choose your fries:</label>
+
+                <input type="radio" id="handmadeFries" name="fries" class="form__input-radio" value="handmadeFries">
+                <label for="handmadeFries">Handmade Fries</label>
+
+                <input type="radio" id="sweetPotatoFries" name="fries" class="form__input-radio" value="sweetPotatoFries">
+                <label for="sweetPotatoFries">Sweet Potato Fries</label>
+
+                <input type="radio" id="truffleFries" name="fries" class="form__input-radio" value="truffleFries">
+                <label for="truffleFries">Truffle Fries</label>
+            </fieldset>
 
             <pre>
-            <code class="sg-snippet">
-                CODE
-            </code>
-          </pre>
+                <code class="sg-snippet">
+&lt;label class=&quot;form__label&quot;&gt;Choose your fries:&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;handmadeFries&quot; name=&quot;fries&quot; class=&quot;form__input-radio&quot; value=&quot;handmadeFries&quot;&gt;
+&lt;label for=&quot;handmadeFries&quot;&gt;Handmade Fries&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;sweetPotatoFries&quot; name=&quot;fries&quot; class=&quot;form__input-radio&quot; value=&quot;sweetPotatoFries&quot;&gt;
+&lt;label for=&quot;sweetPotatoFries&quot;&gt;Sweet Potato Fries&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;truffleFries&quot; name=&quot;fries&quot; class=&quot;form__input-radio&quot; value=&quot;truffleFries&quot;&gt;
+&lt;label for=&quot;truffleFries&quot;&gt;Truffle Fries&lt;/label&gt;
+                </code>
+            </pre>
+
+            <h4 class="sg-section__subsubheading">Option lists</h4>
+
+            <fieldset class="form__fieldset">
+                <label for="" class="form__label">Please choose a size:</label>
+                <select class="form__select">
+                    <option disabled selected>Select . . .</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xxlarge">XXLarge</option>
+                </select>
+            </fieldset>
+
+            <pre>
+                <code class="sg-snippet">
+&lt;label for=&quot;&quot; class=&quot;form__label&quot;&gt;Please choose a size:&lt;/label&gt;
+&lt;select class=&quot;form__select&quot;&gt;
+    &lt;option disabled selected&gt;Select . . .&lt;/option&gt;
+    &lt;option value=&quot;small&quot;&gt;Small&lt;/option&gt;
+    &lt;option value=&quot;medium&quot;&gt;Medium&lt;/option&gt;
+    &lt;option value=&quot;large&quot;&gt;Large&lt;/option&gt;
+    &lt;option value=&quot;xxlarge&quot;&gt;XXLarge&lt;/option&gt;
+&lt;/select&gt;
+                </code>
+            </pre>
+
+            <h4 class="sg-section__subsubheading">Text areas</h4>
+
+            <fieldset class="form__fieldset">
+                <label for="comments" class="form__label">Comments:</label>
+                <textarea name="comments" id="comments" class="form__textarea" rows="6" cols="101" placeholder="Enter your comments here..."></textarea>
+            </fieldset>
+
+            <pre>
+                <code class="sg-snippet">
+&lt;label for=&quot;comments&quot; class=&quot;form__label&quot;&gt;Comments:&lt;/label&gt;
+&lt;textarea name=&quot;comments&quot; id=&quot;comments&quot; class=&quot;form__textarea&quot; rows=&quot;6&quot; cols=&quot;101&quot; placeholder=&quot;Enter your comments here...&quot;&gt;&lt;/textarea&gt;
+                </code>
+            </pre>
 
         </div>
 
-        <div class="sg-section__group">
-            <h3 id="social-menu" class="sg-section__subheading js-section">Social Menu</h3>
+        <div id="social-menu" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading js-section">Social Menu</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                There are three social buttons which can be used where it might be needed. It's not necessary to specify a special class, since the buttons is styled according to it's link.
             </div>
             <hr/>
 
@@ -326,20 +411,19 @@
       </pre>
         </div> <!-- social menu section-->
 
-        <div class="sg-section__group js-section">
-            <h3 id="list" class="sg-section__subheading">List</h3>
+        <div id="list"  class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">List</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                Our list provides a set of different emojis to be shown in front of the list item.
             </div>
             <hr/>
 
             <h3 class="list__heading">Classic Burglar</h3>
             <ul class="list">
-                <li class="list__item">Tomatoes</li>
-                <li class="list__item">Cheese</li>
-                <li class="list__item">Salad</li>
-                <li class="list__item">Bacon</li>
+                <li class="list__item list__item--tomatoes">Tomatoes</li>
+                <li class="list__item list__item--cheese">Cheese</li>
+                <li class="list__item list__item--bacon">Bacon</li>
                 <li class="list__item list__item--fries">French Fries</li>
             </ul>
 
@@ -347,10 +431,9 @@
         <code class="sg-snippet">
 &lt;h3 class=&quot;list__heading&quot;&gt;Classic Burglar&lt;/h3&gt;
 &lt;ul class=&quot;list&quot;&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Tomatoes&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Cheese&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Salad&lt;/li&gt;
-  &lt;li class=&quot;list__item&quot;&gt;Bacon&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--tomatoes&quot;&gt;Tomatoes&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--cheese&quot;&gt;Cheese&lt;/li&gt;
+  &lt;li class=&quot;list__item list__item--bacon&quot;&gt;Bacon&lt;/li&gt;
   &lt;li class=&quot;list__item list__item--fries&quot;&gt;French Fries&lt;/li&gt;
 &lt;/ul&gt;
         </code>
@@ -358,11 +441,11 @@
 
         </div> <!-- list section -->
 
-        <div class="sg-section__group js-section">
-            <h3 id="link" class="sg-section__subheading">Link</h3>
+        <div id="link" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">Link</h3>
 
             <div class="sg-section__description">
-                Description is still missing!
+                The links in this styleguide are seperated by icons to show if it's an internal, external oder document link.
             </div>
             <hr>
 
@@ -385,12 +468,12 @@
         </pre>
         </div> <!-- link section -->
 
-        <div class="sg-section__group js-section">
-            <h3 id="navbar" class="sg-section__subheading">Navigation</h3>
+        <div id="navbar" class="sg-section__group js-section">
+            <h3 class="sg-section__subheading">Navigation</h3>
 
 
             <div class="sg-section__description">
-                Description is still missing!
+                The navigation is to be used like the following example. 
             </div>
             <hr>
 
