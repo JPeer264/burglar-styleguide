@@ -26,7 +26,8 @@
     }
 
     &__image {
-      height: $sg-header-height / 2;
+      height: $sg-header-height / 3;
+      padding: 0 6rem;
     }
   }
 }
